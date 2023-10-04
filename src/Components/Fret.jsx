@@ -13,6 +13,17 @@ export default function Fret({ index, setNumAnswers, note, generateNewTarget, ta
 	const toast = useToast();
 	return (
 		<td className={`border-solid w-24 h-8 border-black ${index != 5 ? 'border-l-4 border-r-4' : ''}`}>
+			{(
+				fretMarkers.filter((marker) => {
+					return marker.string == index + 1 && marker.fret == string.indexOf(note) + 1;
+				}) || []
+			).length > 0 ? (
+				<div class='absolute text-center z-10 mt-10 h-0 justify-center m-auto'>
+					<button class=' rounded-full bg-slate-800 w-4 h-4 justify-center align-middle mt-4 ml-10'></button>
+				</div>
+			) : (
+				''
+			)}
 			<button
 				onClick={() => {
 					setNumAnswers(numAnswers + 1);
@@ -40,18 +51,7 @@ export default function Fret({ index, setNumAnswers, note, generateNewTarget, ta
 						});
 					}
 				}}
-				className='bg-black  w-full h-1 align-top bottom-0 p-0 mt-0 mb-8 hover:bg-red-500 transition-all duration-300'></button>
-			{(
-				fretMarkers.filter((marker) => {
-					return marker.string == index + 1 && marker.fret == string.indexOf(note) + 1;
-				}) || []
-			).length > 0 ? (
-				<div class='absolute text-center justify-center m-auto'>
-					<button class=' rounded-full bg-slate-800 w-4 h-4 justify-center align-middle mt-4 ml-10'></button>
-				</div>
-			) : (
-				''
-			)}
+				className='bg-black z-50 w-full h-1 align-top bottom-0 p-0 mt-0 mb-8 hover:bg-red-500 transition-all duration-300'></button>
 		</td>
 	);
 }
