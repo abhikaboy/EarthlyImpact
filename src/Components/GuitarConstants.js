@@ -16,7 +16,7 @@ const bStringFrequencies = [
 ];
 const highEString = ['F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E'];
 const highEStringFrequencies = [
-	329.63, 349.23, 369.99, 392.0, 415.3, 440.0, 466.16, 493.88, 523.25, 554.37, 587.33, 622.25,
+	349.23, 369.99, 392.0, 415.3, 440.0, 466.16, 493.88, 523.25, 554.37, 587.33, 622.25, 659,
 ];
 const combinedStrings = [highEString, bString, gString, dString, aString, eString];
 const combinedStringFrequencies = [

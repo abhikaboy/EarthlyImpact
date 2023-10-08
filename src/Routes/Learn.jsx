@@ -45,6 +45,10 @@ export default function Learn() {
 	const pitchMatches = (pitch, targetFrequency) => {
 		return pitch > targetFrequency - pitchTolerance && pitch < targetFrequency + pitchTolerance;
 	};
+	const [target, setTarget] = useState({ note: 'A', string: 'A' });
+	const targetRef = useRef();
+	targetRef.current = target;
+	const targetEqual = (target1, target2) => target1.note === target2.note && target1.string === target2.string;
 	const generateTarget = () => {
 		console.log('generating Target');
 		// choose a random element in the arary Valid Strings
@@ -64,11 +68,11 @@ export default function Learn() {
 		if (!includeSharps && note.includes('#')) {
 			note = note.charAt(0);
 		}
-		return { note: note, string: strings[newString] };
+		let generatedTarget = { note: note, string: strings[newString] };
+		let multipleOptions = validNotes.length > 1 || validStrings.length > 1;
+		console.log(multipleOptions);
+		return multipleOptions && targetEqual(generatedTarget, targetRef.current) ? generateTarget() : generatedTarget;
 	};
-	const [target, setTarget] = useState({ note: 'A', string: 'A' });
-	const targetRef = useRef();
-	targetRef.current = target;
 
 	const [numAnswers, setNumAnswers] = useState(0);
 	const [numCorrect, setNumCorrect] = useState(0);
@@ -81,7 +85,12 @@ export default function Learn() {
 	const addAverageTime = (time) => {
 		setAverageTime((averageTime * numAnswers + time) / (numAnswers + 1));
 	};
-
+	const init = () => {
+		setNumAnswers(0);
+		setNumCorrect(0);
+		setAverageTime(0);
+		setTarget(generateTarget());
+	};
 	const generateNewTarget = () => {
 		console.log('New Target Generated');
 		if (!canGenerate) return;
@@ -101,6 +110,9 @@ export default function Learn() {
 			position: 'top',
 		});
 	};
+	const newTargetRef = useRef(generateNewTarget);
+	newTargetRef.current = generateNewTarget;
+
 	useEffect(() => {
 		onOpen();
 		console.log('use effect');
@@ -130,7 +142,7 @@ export default function Learn() {
 			}
 			if (pitchMatches(pitch, targetF)) {
 				console.log('pitch matches: ' + pitch + ' ' + targetF);
-				generateNewTarget();
+				newTargetRef.current();
 			}
 		}
 		window.setTimeout(() => updatePitch(analyserNode, detector, input, sampleRate), 1000);
@@ -162,6 +174,7 @@ export default function Learn() {
 				validNotes={validNotes}
 				isOpen={isOpen}
 				onClose={onClose}
+				init={init}
 			/>
 			<NavBar />
 			<div className='mt-8 justify-center place-content-center flex justify-content-center flex-col'>

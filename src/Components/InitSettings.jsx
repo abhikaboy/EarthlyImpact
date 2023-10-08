@@ -29,6 +29,7 @@ export default function InitSettings({
 	validNotes,
 	isOpen,
 	onClose,
+	init,
 }) {
 	return (
 		<Modal isOpen={isOpen} onClose={onClose} size='md' className='rounded-xl'>
@@ -143,7 +144,13 @@ export default function InitSettings({
 				</ModalBody>
 
 				<ModalFooter className='bg-dark'>
-					<Button colorScheme='red' mr={3} onClick={onClose}>
+					<Button
+						colorScheme='red'
+						mr={3}
+						onClick={() => {
+							onClose();
+							init();
+						}}>
 						Start
 					</Button>
 				</ModalFooter>
