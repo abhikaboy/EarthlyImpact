@@ -13,7 +13,7 @@ export default function Home() {
 			<div className='flex flex-col h-full w-full'>
 				<div className='ml-20  absolute top-1/2 -translate-y-1/2'>
 					<h1 className='text-8xl font-bold text-white w-3/5 '>Earthly Impact</h1>
-					<div className='text-white text-2xl font-light my-2'>Shaping People, Shaping Trees</div>
+					{/* <div className='text-white text-2xl font-light my-2'>Shaping People, Shaping Trees</div> */}
 					<button className='btn  bg-opacity-20 bg-green-500 text-white border-green-500 px-10 hover:scale-90 hover:bg-green-800 hover:bg-opacity-20'>
 						<Link to='/Events'>Get Started</Link>
 					</button>
