@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './Routes/Home';
-import Learn from './Routes/Learn';
+import Events from './Routes/Events';
+import Store from './Routes/Store';
 import './App.css';
 function App() {
 	return (
 		<Routes>
 			<Route path='/' element={<Home />} />
-			<Route path='/learn' element={<Learn />} />
+			<Route path='/Events' element={<Events />} />
+			<Route path='/Store' element={<Store />} />
 			<Route path='/*' element={<Home />} />
 		</Routes>
 	);
