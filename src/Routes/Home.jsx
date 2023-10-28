@@ -1,4 +1,4 @@
-import { Button, Heading, Image } from '@chakra-ui/react';
+import { Button, Center, Heading, Image } from '@chakra-ui/react';
 import bg from './bg.png';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -24,12 +24,24 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className='pl-32'>
-				<div className='text-4xl font-bold mt-48'>About Us</div>
+			<div className='pl-32 mt-48'>
+				<Center className='mr-32'>
+					<Image
+						w='20vw'
+						h='20vw'
+						src='https://cdn.discordapp.com/attachments/890066881866776616/1167735335829127179/Screenshot_2023-10-28_at_4.03.10_AM.png?ex=654f3547&is=653cc047&hm=4700eb71cc2bdd84800d594490cba4b87a1a94b4ac31e3600b41a8d5be49094c&'></Image>
+				</Center>
+				<div className='text-4xl font-bold'>About Us</div>
 				<div className='text-2xl font-light mt-2 pr-32'>
 					At EmpowerEarth, we are committed to empowering college students to make a positive impact on the
 					environment and society. We offer a unique platform that seamlessly connects you to service events
 					and sustainable products through e-commerce. 
+				</div>
+				<div className='text-4xl font-bold mt-16'>Mission Statement</div>
+				<div className='text-2xl font-light mt-2 pr-32'>
+					Promoting students to drive positive change by connecting them with non-profits and sustainable
+					business owners, encouraging volunteerism, and supporting initiatives for a more sustainable and
+					impactful future.
 				</div>
 				<div className='text-4xl font-bold mt-16'>Our Partners</div>
 				<div className='flex flex-row w-4/5 mb-4'>

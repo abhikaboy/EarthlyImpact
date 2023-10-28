@@ -20,7 +20,7 @@ export default function Events() {
 		{
 			icon: 'https://media.discordapp.net/attachments/890066881866776616/1166200884196278303/ELDERLYHELP_1.png?ex=6549a035&is=65372b35&hm=6bcbc8b297fb4ad07576c072f05ec3ad22d586e9ced61a5e94876ace14e0db16&=&width=255&height=286',
 			title: 'Elderly Care',
-			location: 'Hale House',
+			location: 'Haley House',
 			when: '3pm-8pm',
 		},
 		{

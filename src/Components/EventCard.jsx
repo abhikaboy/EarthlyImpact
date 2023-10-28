@@ -41,11 +41,16 @@ export default function EventCard({ title, location, when, icon }) {
 								<div className='text-4xl font-bold'>{title}</div>
 								<div className='text-2xl font-light'>Location: {location}</div>
 								<div className='text-2xl font-light'>At: {when}</div>
-								<button
-									className=' btn btn-outline btn-primary shadow-none p-3 w-full rounded-md'
-									onClick={onClose}>
-									Join
-								</button>
+								<Link
+									to='https://eycf33ro14r.typeform.com/to/XkSB4SAX'
+									target='_blank'
+									rel='noopener noreferrer'>
+									<button
+										className=' btn btn-outline btn-primary shadow-none p-3 w-full rounded-md'
+										onClick={onClose}>
+										Join
+									</button>
+								</Link>
 								<Link
 									target='_blank'
 									rel='noopener noreferrer'
