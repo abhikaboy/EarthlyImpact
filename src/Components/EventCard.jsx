@@ -12,6 +12,7 @@ import {
 	useDisclosure,
 	Progress,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 export default function EventCard({ title, location, when, icon }) {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,6 +46,22 @@ export default function EventCard({ title, location, when, icon }) {
 									onClick={onClose}>
 									Join
 								</button>
+								<Link
+									target='_blank'
+									rel='noopener noreferrer'
+									to='https://docs.google.com/document/d/1ibsrZtQhPsTJ43ph-9oozlyQPB-gAnSaG2nsaNmIrTg/edit'>
+									<button className='btn btn-ghost' href=''>
+										Terms of Service
+									</button>
+								</Link>
+								<Link
+									target='_blank'
+									rel='noopener noreferrer'
+									to='https://docs.google.com/document/d/1BAaNxDda48VmiWcSXmJY5JBw8h4GhAdYxS3Y_M7BUjs/edit'>
+									<button className='btn btn-ghost' href=''>
+										Privacy Policy
+									</button>
+								</Link>
 							</div>
 							<div className='flex flex-col ml-8 w-3/5'>
 								<div>
