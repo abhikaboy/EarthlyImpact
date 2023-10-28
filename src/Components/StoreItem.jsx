@@ -29,12 +29,16 @@ export default function StoreItem({ title, cost, icon }) {
 							<div className='flex flex-col'>
 								<div className='font-bold text-2xl ml-8'>{title}</div>
 								<div className='ml-8'>
-									EmpowerEarth recognizes the utmost importance of upholding CSR values within our
-									company. As an organization founded on the principles of sustainability and
-									environmental stewardship, it is innate in our value proposition to commit to an
-									ethical standard of conduct. Beyond making a profit, it is our mission to not only
-									increase service within the Boston community but also promote sustainable products,
-									thereby mitigating
+									- Made from soft and lightweight nylon with a matte finish. - Durable
+									water-repellent finish. *The fabric is coated with a water-repellent agent so the
+									effect lasts longer. The finish is not permanent. - Anti-static lining. - Premium
+									down with a fill power of over 750. - Pocketable design. - Now features wider
+									quilting and a relaxed fit for more casual styling. - We’ve added a strip behind the
+									front zipper to keep cold air out. - The storage pouch now fastens with a buckle so
+									it can be attached and detached with a single touch. - The 3D cut ensures a full
+									range of motion through the shoulders, while the split raglan design gives it a
+									sleek look in the front. - The tape on the inside of the cuffs is brushed for a soft
+									feel. - Perfect for wearing as a middle or outer layer.
 								</div>
 								<div className='text-2xl text-center font-bold mt-12'>
 									Price: <s> ${cost}</s>
