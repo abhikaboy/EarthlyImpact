@@ -33,13 +33,31 @@ export default function Events() {
 			icon: 'https://media.discordapp.net/attachments/890066881866776616/1166200885291012146/TUTORING_PICTURE_1.png?ex=6549a036&is=65372b36&hm=fb9289db2f85d0edfd68f282212d0506de1677f0332b610d2959223e55232171&=&width=352&height=352',
 			title: 'Elementary Tutoring',
 			location: 'Signet Education',
-			when: '3pm-8pm',
+			when: '3pm-4pm',
 		},
 		{
 			icon: 'https://media.discordapp.net/attachments/890066881866776616/1166200884737343598/HELPINGANIMAL_1.png?ex=6549a035&is=65372b35&hm=381ec7d2fcdb48fa51658e88438a3a4fb0faade8d770c77108a95be6f4bf8271&=&width=369&height=338',
 			title: 'Animal Welfare',
-			location: 'Boston Commons',
+			location: 'Boston Public Garden',
+			when: '7pm-8pm',
+		},
+		{
+			icon: 'https://media.discordapp.net/attachments/890066881866776616/1166200883772665876/ACTIVISMCARTOON_1.png?ex=6549a035&is=65372b35&hm=21f540ada908b509647fdde043645342fc876fb3dea4f0de852488660433d40a&=&width=345&height=299',
+			title: 'Advocacy and Activism',
+			location: 'Newbury Street',
 			when: '3pm-8pm',
+		},
+		{
+			icon: 'https://media.discordapp.net/attachments/890066881866776616/1166200884464726106/foodrivepic_1.png?ex=6549a035&is=65372b35&hm=085fd73f644a24e3d9d2e91e2b3c62a3f224fd771201a6b42bec775f443f82f3&=&width=431&height=332',
+			title: 'Food Drive Event 2',
+			location: 'Pine Street Inn',
+			when: '3pm-8pm',
+		},
+		{
+			icon: 'https://media.discordapp.net/attachments/890066881866776616/1166200885291012146/TUTORING_PICTURE_1.png?ex=6549a036&is=65372b36&hm=fb9289db2f85d0edfd68f282212d0506de1677f0332b610d2959223e55232171&=&width=352&height=352',
+			title: 'Middle School Tutoring',
+			location: 'Signet Education',
+			when: '4pm-8pm',
 		},
 	];
 	return (
